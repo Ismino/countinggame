@@ -33,4 +33,35 @@ def calculator():
                     else:
                         print("Fel: Division med noll är inte tillåten!")
             
-            
+            else:
+                print("ogiltigt val, försök igen!")
+        except ValueError:
+            print("felaktig inmatning")
+
+# program för att hitta största felen i en lista 
+
+def find_max_errors(errors):
+    """
+    Hitta det största felet i en lista med fel.
+    :param errors: Lista med fel
+    :return: Det största felet
+    """
+
+    if not errors:
+        print("fel: listan är tom.")
+        return None
+
+    max_errors = max(errors)
+    print(f"det största talet är : {max_errors}")
+
+#körning av programmen
+
+if __name__ == "__main__":
+    #kör räknemaskinen 
+    calculator()
+
+    # Exempel på att hitta största felet
+    errors = [0.1, 0.03, 0.7, 0.4, 0.05]
+    print("Analyserar lista:", errors)
+    find_max_error(errors)
+    
